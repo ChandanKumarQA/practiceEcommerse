@@ -101,6 +101,7 @@
 	</dependencies>
 	<build>
   <plugins>
+    <!-- Surefire for running tests -->
     <plugin>
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-surefire-plugin</artifactId>
@@ -110,8 +111,18 @@
           <include>**/*Run.java</include>
           <include>**/*Test.java</include>
         </includes>
+        <!-- Important for Cucumber + Extent -->
+        <systemPropertyVariables>
+          <extent.reporter.spark.start>true</extent.reporter.spark.start>
+          <extent.reporter.spark.out>target/extent-report/ExtentSpark.html</extent.reporter.spark.out>
+          <extent.reporter.pdf.start>true</extent.reporter.pdf.start>
+          <extent.reporter.pdf.out>target/extent-report/ExtentReport.pdf</extent.reporter.pdf.out>
+          <extent.reporter.html.start>true</extent.reporter.html.start>
+          <extent.reporter.html.out>target/extent-report/ExtentReport.html</extent.reporter.html.out>
+        </systemPropertyVariables>
       </configuration>
     </plugin>
   </plugins>
 </build>
+
 </project>
