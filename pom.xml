@@ -110,6 +110,8 @@
   <include>**/*Run.java</include>
   <include>**/*run.java</include>   <!-- छोटा r भी -->
   <include>**/*Test.java</include>
+ <include>**/TestRunner.java</include>
+
 </includes>
 
         <systemPropertyVariables>
