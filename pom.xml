@@ -108,9 +108,11 @@
       <version>3.2.5</version>
       <configuration>
         <includes>
-          <include>**/*Run.java</include>
-          <include>**/*Test.java</include>
-        </includes>
+    <include>**/*Run.java</include>
+    <include>**/*run.java</include>
+    <include>**/*Test.java</include>
+</includes>
+
         <!-- Important for Cucumber + Extent -->
         <systemPropertyVariables>
           <extent.reporter.spark.start>true</extent.reporter.spark.start>
