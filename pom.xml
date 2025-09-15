@@ -99,35 +99,21 @@
     <scope>test</scope>
 </dependency>
 	</dependencies>
-	<build>
-  <plugins>
-    <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-surefire-plugin</artifactId>
-      <version>3.2.5</version>
-      <configuration>
-       <includes>
-  <include>**/*Run.java</include>
-  <include>**/*run.java</include>   <!-- छोटा r भी -->
-  <include>**/*Test.java</include>
- <include>**/TestRunner.java</include>
+		<build>
+    <plugins>
+       <plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-surefire-plugin</artifactId>
+  <version>3.2.5</version>
+  <configuration>
+    <includes>
+      <include>**/*Run.java</include>
+      <include>**/*Runner.java</include>
+    </includes>
+  </configuration>
+</plugin>
 
-</includes>
-
-        <systemPropertyVariables>
-          <cucumber.filter.tags>@Smoke</cucumber.filter.tags>
-
-          <!-- Extent Report configs -->
-          <extent.reporter.spark.start>true</extent.reporter.spark.start>
-          <extent.reporter.spark.out>target/extent-report/ExtentSpark.html</extent.reporter.spark.out>
-          <extent.reporter.pdf.start>true</extent.reporter.pdf.start>
-          <extent.reporter.pdf.out>target/extent-report/ExtentReport.pdf</extent.reporter.pdf.out>
-          <extent.reporter.html.start>true</extent.reporter.html.start>
-          <extent.reporter.html.out>target/extent-report/ExtentReport.html</extent.reporter.html.out>
-        </systemPropertyVariables>
-      </configuration>
-    </plugin>
-  </plugins>
+    </plugins>
 </build>
 
 
