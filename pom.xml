@@ -101,17 +101,29 @@
 	</dependencies>
 		<build>
     <plugins>
-       <plugin>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-surefire-plugin</artifactId>
-  <version>3.2.5</version>
-  <configuration>
-    <includes>
-      <include>**/*Run.java</include>
-      <include>**/*Runner.java</include>
-    </includes>
-  </configuration>
+      <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.2.5</version>
+    <configuration>
+        <includes>
+            <include>**/*Run.java</include>
+            <include>**/*Runner.java</include>
+        </includes>
+        <systemPropertyVariables>
+            <!-- Generate Cucumber JSON + HTML + Extent reports -->
+            <cucumber.publish.enabled>true</cucumber.publish.enabled>
+            <cucumber.plugin>
+                pretty,
+                html:target/cucumber-reports/cucumber.html,
+                json:target/cucumber-reports/cucumber.json,
+                junit:target/cucumber-reports/cucumber.xml,
+                com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:
+            </cucumber.plugin>
+        </systemPropertyVariables>
+    </configuration>
 </plugin>
+
 
     </plugins>
 </build>
