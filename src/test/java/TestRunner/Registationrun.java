@@ -14,6 +14,6 @@ import io.cucumber.junit.Cucumber;
 		monochrome = true
 
 )
-public class Registationrun {
+public class RegistationRun {
 
 }

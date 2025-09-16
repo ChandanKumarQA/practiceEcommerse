@@ -17,6 +17,6 @@ plugin = { "pretty", "html:target/cucumber-reports/cucumber_register.html",
 		monochrome = true
 
 )
-public class Loginrun {
+public class LoginRun {
 
 }

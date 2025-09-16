@@ -17,6 +17,6 @@ import io.cucumber.junit.CucumberOptions;
 	    },
 	    monochrome = true
 	)
-public class purchaserunner {
+public class purchaseRun {
 
 }

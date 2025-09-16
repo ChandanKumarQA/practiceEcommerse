@@ -116,6 +116,7 @@
     <includes>
       <include>**/*Run.java</include>
       <include>**/*Runner.java</include>
+  <include>**/*runner.java</include>
     </includes>
   </configuration>
 </plugin>
