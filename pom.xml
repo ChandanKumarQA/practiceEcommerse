@@ -101,18 +101,18 @@
 	</dependencies>
 		<build>
     <plugins>
-      <plugin>
+     <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-surefire-plugin</artifactId>
     <version>3.2.5</version>
     <configuration>
         <includes>
             <include>**/*Run.java</include>
+            <include>**/*run.java</include>
             <include>**/*Runner.java</include>
+            <include>**/*runner.java</include>
         </includes>
         <systemPropertyVariables>
-            <!-- Generate Cucumber JSON + HTML + Extent reports -->
-            <cucumber.publish.enabled>true</cucumber.publish.enabled>
             <cucumber.plugin>
                 pretty,
                 html:target/cucumber-reports/cucumber.html,
@@ -123,6 +123,7 @@
         </systemPropertyVariables>
     </configuration>
 </plugin>
+
 
 
     </plugins>
