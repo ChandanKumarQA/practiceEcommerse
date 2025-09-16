@@ -4,7 +4,7 @@
   <artifactId>Ecommersepractice</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
-  <dependencies>
+<dependencies>
 		<!--
  https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java 
 -->
@@ -93,10 +93,35 @@
 		</dependency>
 <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
-    <groupId>org.testng</groupId>
-    <artifactId>testng</artifactId>
-    <version>7.11.0</version>
-    <scope>test</scope>
+  <groupId>junit</groupId>
+  <artifactId>junit</artifactId>
+  <version>4.13.2</version>
+  <scope>test</scope>
 </dependency>
+<dependency>
+  <groupId>io.cucumber</groupId>
+  <artifactId>cucumber-testng</artifactId>
+  <version>7.14.1</version>
+  <scope>test</scope>
+</dependency>
+
 	</dependencies>
+	<build>
+    <plugins>
+       <plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-surefire-plugin</artifactId>
+  <version>3.2.5</version>
+  <configuration>
+    <includes>
+      <include>**/*Run.java</include>
+      <include>**/*Runner.java</include>
+    </includes>
+  </configuration>
+</plugin>
+
+    </plugins>
+</build>
+
+
 </project>
