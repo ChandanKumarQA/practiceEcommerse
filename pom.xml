@@ -101,16 +101,20 @@
 	</dependencies>
 		<build>
     <plugins>
-     <plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-surefire-plugin</artifactId>
-    <version>3.2.5</version>
-    <configuration>
-        <suiteXmlFiles>
-            <suiteXmlFile>testng.xml</suiteXmlFile>
-        </suiteXmlFiles>
-    </configuration>
+    <plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-surefire-plugin</artifactId>
+  <version>3.2.5</version>
+  <configuration>
+    <includes>
+      <include>**/*run.java</include>
+      <include>**/*Run.java</include>
+      <include>**/*Runner.java</include>
+      <include>**/*runner.java</include>
+    </includes>
+  </configuration>
 </plugin>
+
 
 
 
